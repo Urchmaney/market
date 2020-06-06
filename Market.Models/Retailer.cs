@@ -1,7 +1,7 @@
 using System;
 
-namespace Market.Client {
-  public class Client {
+namespace Market.Retailer {
+  public class Retailer {
     public int Id { get; set; }
     public string Name { get; set; }
     public string PhoneNumber { get; set; }
