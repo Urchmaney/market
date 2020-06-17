@@ -1,6 +1,6 @@
 using System;
 
-namespace Market.Product{
+namespace Market.Models{
   public class Product {
     public int Id { get; set; }
     public string MedicalName { get; set; }
