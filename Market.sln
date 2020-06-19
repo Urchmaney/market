@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market.Models", "Market.Mod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market.DataService.SQL", "Market.DataService.SQL\Market.DataService.SQL.csproj", "{D040A6DB-2EAE-43D1-BE81-32B47C36945C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market.Interfaces", "Market.Interfaces\Market.Interfaces.csproj", "{6A65A89F-5CD4-4CDA-B1DD-B5BE747F63E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{D040A6DB-2EAE-43D1-BE81-32B47C36945C}.Release|x64.Build.0 = Release|Any CPU
 		{D040A6DB-2EAE-43D1-BE81-32B47C36945C}.Release|x86.ActiveCfg = Release|Any CPU
 		{D040A6DB-2EAE-43D1-BE81-32B47C36945C}.Release|x86.Build.0 = Release|Any CPU
+		{6A65A89F-5CD4-4CDA-B1DD-B5BE747F63E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A65A89F-5CD4-4CDA-B1DD-B5BE747F63E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A65A89F-5CD4-4CDA-B1DD-B5BE747F63E1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6A65A89F-5CD4-4CDA-B1DD-B5BE747F63E1}.Debug|x64.Build.0 = Debug|Any CPU
+		{6A65A89F-5CD4-4CDA-B1DD-B5BE747F63E1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6A65A89F-5CD4-4CDA-B1DD-B5BE747F63E1}.Debug|x86.Build.0 = Debug|Any CPU
+		{6A65A89F-5CD4-4CDA-B1DD-B5BE747F63E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A65A89F-5CD4-4CDA-B1DD-B5BE747F63E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A65A89F-5CD4-4CDA-B1DD-B5BE747F63E1}.Release|x64.ActiveCfg = Release|Any CPU
+		{6A65A89F-5CD4-4CDA-B1DD-B5BE747F63E1}.Release|x64.Build.0 = Release|Any CPU
+		{6A65A89F-5CD4-4CDA-B1DD-B5BE747F63E1}.Release|x86.ActiveCfg = Release|Any CPU
+		{6A65A89F-5CD4-4CDA-B1DD-B5BE747F63E1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
