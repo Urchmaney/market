@@ -33,6 +33,25 @@ namespace Market.Tests.DatabaseService
       //Then
       Assert.Equal(await _wholesalerService.GetWholesalers().CountAsync(), initialWholesalerLength + 1);
     }
+
+    [Fact]
+    public void Add_Wholesaler_FailsWithoutRequiredField()
+    {
+      //Given
+       
+      //When
+        Action act = async () => {
+          var wholesaler = new Wholesaler() {
+            PhoneNumber = "08164292882",
+            CreatedAt = DateTime.Now,
+            UpdatedAt = DateTime.Now,
+            IsDeleted = false,
+          };
+          await _wholesalerService.AddWholesaler(wholesaler);
+        };
+      //Then
+      Assert.Throws<ArgumentException>(act);
+    }
     
   }
 }
