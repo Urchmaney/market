@@ -7,13 +7,8 @@ namespace Market.DataService.SQL{
     public MarketDbContext(DbContextOptions<MarketDbContext> options)
     : base(options) {
     }
-    private DbSet<Wholesaler> Wholesalers { get; set; }
-    private DbSet<Retailer> Retailers { get; set; }
-
-    public async void CreateWholesaler(Wholesaler wholesaler) {
-      await Wholesalers.AddAsync(wholesaler);
-      await SaveChangesAsync();
-    }
+    public DbSet<Wholesaler> Wholesalers { get; set; }
+    public DbSet<Retailer> Retailers { get; set; }
 
     public async void CreateRetailer(Retailer retailer) {
       await Retailers.AddAsync(retailer);
