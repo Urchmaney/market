@@ -2,7 +2,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Market.Models;
 
-namespace Market.DataService.SQL{
+namespace Market.DataService{
   public class MarketDbContext : DbContext {
     public MarketDbContext(DbContextOptions<MarketDbContext> options)
     : base(options) {

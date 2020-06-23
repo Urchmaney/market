@@ -1,4 +1,3 @@
-using Market.DataService.SQL;
 using Market.Interfaces.DataService;
 using Market.Models;
 using System.Threading.Tasks;
@@ -10,7 +9,7 @@ namespace Market.DataService {
     public WholesalerService(MarketDbContext context){
       _context = context;
     }
-    public async void AddWholesaler(Wholesaler wholesaler) {
+    public async Task AddWholesaler(Wholesaler wholesaler) {
       await _context.Wholesalers.AddAsync(wholesaler);
       await _context.SaveChangesAsync();
     }

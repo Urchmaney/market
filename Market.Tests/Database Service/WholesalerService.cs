@@ -1,17 +1,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Market.Interfaces.DataService;
-using Market.DataService.SQL;
+using Market.DataService;
 using Market.Models;
 using Xunit;
 
 namespace Market.Tests.DatabaseService
 {
-  public class WholesalerService
+  public class WholesalerServiceTest
   {
     private readonly IWholesalerService _wholesalerService;
-    public WholesalerService(){
-      var option = new DbContextOptionBuilder<MarketDbContext>().UseInMemoryDatabase(databaseName: "Market").options;
+    public WholesalerServiceTest(){
+      var option = new DbContextOptionsBuilder<MarketDbContext>().UseInMemoryDatabase(databaseName: "Market").Options;
       var marketContext = new MarketDbContext(option);
       _wholesalerService = new WholesalerService(marketContext);
     }
@@ -20,7 +20,7 @@ namespace Market.Tests.DatabaseService
     public async void Add_Wholesaler_IncrementDatabaseTable()
     {
       //Given
-      var initialWholesalerLength =_wholesalerService.GetWholesalers().Length;
+      var initialWholesalerLength =await _wholesalerService.GetWholesalers().CountAsync();
       var wholesaler = new Wholesaler() {
         CompanyName = "Memory",
         PhoneNumber = "08164292882",
@@ -31,7 +31,7 @@ namespace Market.Tests.DatabaseService
       //When
       await _wholesalerService.AddWholesaler(wholesaler);
       //Then
-      Assert.Equal(_wholesalerService.GetWholesalers().Length, initialWholesalerLength + 1);
+      Assert.Equal(await _wholesalerService.GetWholesalers().CountAsync(), initialWholesalerLength + 1);
     }
     
   }
