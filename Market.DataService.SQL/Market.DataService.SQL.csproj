@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Market.Models\Market.Models.csproj" />
+    <ProjectReference Include="..\Market.Interfaces\Market.Interfaces.csproj" />
   </ItemGroup>
 
   <ItemGroup>
